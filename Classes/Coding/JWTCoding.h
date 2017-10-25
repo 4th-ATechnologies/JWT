@@ -293,5 +293,5 @@ typedef NS_ENUM(NSInteger, JWTError) {
 @property (copy, nonatomic, readonly) NSDictionary *decode;
 
 @property (copy, nonatomic, readonly) JWTBuilder * (^addDataHolder)(JWTAlgorithmBaseDataHolder *dataHolder) __available_in_release_version(JWTVersion_3_0_0);
-@property (copy, nonatomic, readonly) JWTBuilder * (^constructDataHolder)(id<JWTAlgorithmDataHolder> (^block)()) __available_in_release_version(JWTVersion_3_0_0);
+@property (copy, nonatomic, readonly) JWTBuilder * (^constructDataHolder)(id<JWTAlgorithmDataHolder> (^block)(void)) __available_in_release_version(JWTVersion_3_0_0);
 @end

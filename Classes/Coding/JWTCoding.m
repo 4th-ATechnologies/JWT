@@ -374,7 +374,7 @@ static NSString *JWTErrorDomain = @"com.karma.jwt";
 @property (copy, nonatomic, readwrite) JWTBuilder *(^options)(NSNumber *options);
 @property (copy, nonatomic, readwrite) JWTBuilder *(^whitelist)(NSArray *whitelist);
 @property (copy, nonatomic, readwrite) JWTBuilder * (^addDataHolder)(JWTAlgorithmBaseDataHolder *dataHolder);
-@property (copy, nonatomic, readwrite) JWTBuilder * (^constructDataHolder)(id<JWTAlgorithmDataHolder> (^block)());
+@property (copy, nonatomic, readwrite) JWTBuilder * (^constructDataHolder)(id<JWTAlgorithmDataHolder> (^block)(void));
 @end
 
 @implementation JWTBuilder
